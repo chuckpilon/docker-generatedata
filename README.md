@@ -28,6 +28,8 @@ Name | Required | Description
 **GD_DB_PASSWORD**     | *true*  | MySQL database password
 **GD_DB_TABLE_PREFIX** | *false* | MySQL database table prefix (default: **gd_**)
 **GD_ENCRYPTION_SALT** | *false* | Encryption Salt (default: **changeme**)
+**GD_MAX_GENERATED_ROWS** | *false* | Maximum generated rows (default: **100000"**)
+**GD_DEFAULT_NUM_ROWS** | *false* | Default number of generated rows (default: **10**)
 
 Example using an external database:
 

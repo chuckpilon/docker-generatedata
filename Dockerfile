@@ -1,7 +1,6 @@
 FROM php:7.3-fpm-alpine3.9
-MAINTAINER Maxime VISONNEAU <maxime.visonneau@gmail.com>
 
-ENV GENERATEDATA_VERSION '3.2.8'
+# ENV GENERATEDATA_VERSION '3.2.8'
 ENV CONFD_VERSION        '0.16.0'
 
 WORKDIR /opt/generatedata
@@ -9,8 +8,8 @@ WORKDIR /opt/generatedata
 RUN \
 apk add --no-cache bash supervisor nginx git ;\
 docker-php-ext-install mysqli ;\
-git clone https://github.com/benkeen/generatedata.git /opt/generatedata ;\
-git checkout ${GENERATEDATA_VERSION} ;\
+git clone https://github.com/chuckpilon/generatedata.git /opt/generatedata ;\
+# git checkout ${GENERATEDATA_VERSION} ;\
 mkdir -p /run/nginx ;\
 chown -R www-data:www-data /var/www /run/nginx ;\
 chmod -R o+w /opt/generatedata/cache
